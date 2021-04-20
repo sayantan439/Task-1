@@ -5,7 +5,7 @@ x=data$Hours
 y=data$Scores                         #Defining the Variables 
 m=lm(y~x)                         #Defining the linear model 
 summary(m)                        #Summary of the linear model
-predict.lm(m,newdata)             #Predicting the score value for the given study hour
+predict.lm(m,ndata)             #Predicting the score value for the given study hour
 library(ggplot2)                      #Calling the library
 ggplot(data,aes(x,y)) + geom_point() +geom_smooth(method = "lm")+ labs(title = "Student Percentage vs Study Hours",
         x = "Study Hours",
